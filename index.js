@@ -5,9 +5,20 @@ const tipsOptions = document.querySelectorAll(".tip-selector__tips__tip");
 const tipSelector = document.querySelector(".person-selector");
 const amountInput = document.querySelector("#amount");
 const peopleInput = document.querySelector("#people");
+const button = document.querySelector("button");
 var tip = 0,
   people = 0,
   amount = 0;
+
+const disableButton = () => {
+  button.disabled = true;
+};
+
+const enableButton = () => {
+  button.disabled = false;
+};
+
+disableButton();
 
 const setValues = (tip, amount) => {
   tipPerson.textContent = tip.toFixed(2);
@@ -31,10 +42,12 @@ const resetValues = () => {
   resetCustomTip();
   resetTipOptions();
   removeError();
+  disableButton();
 };
 
 setValues(0, 0);
 const calculateTip = () => {
+  enableButton();
   if (!people || people === 0) {
     setError();
     return;

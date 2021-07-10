@@ -197,9 +197,18 @@ input[type="number"]:focus {
     }
   }
   .result {
-    button:hover {
-      cursor: pointer;
-      background-color: $lighter-grayish-cyan;
+    button {
+      &:disabled {
+        background-color: $darker-grayish-cyan;
+        &:hover {
+          cursor: pointer;
+          background-color: $darker-grayish-cyan;
+        }
+      }
+      &:hover {
+        background-color: $lighter-grayish-cyan;
+        cursor: pointer;
+      }
     }
     .info {
       .amount {

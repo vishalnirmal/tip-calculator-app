@@ -256,9 +256,16 @@ input[type="number"]:focus {
     padding-left: 15px;
     width: calc(100% - 30px);
   }
-  .result button:hover {
+  .result button:disabled {
+    background-color: #5e7a7d;
+  }
+  .result button:disabled:hover {
     cursor: pointer;
+    background-color: #5e7a7d;
+  }
+  .result button:hover {
     background-color: #f4fafa;
+    cursor: pointer;
   }
   .result .info .amount h1 {
     font-size: 40px;
