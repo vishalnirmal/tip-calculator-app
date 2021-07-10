@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+body {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  background-color: #c5e4e7;
+}
+
+header {
+  padding: 11% 0 40px;
+  text-align: center;
+}
+
+main {
+  background-color: white;
+  padding: 25px;
+  border-radius: 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+h3 {
+  color: #5e7a7d;
+  font-weight: 700;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.input-div {
+  position: relative;
+}
+
+.input-div > p {
+  font-size: 24px;
+  color: #7f9c9f;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.input-div > p > i {
+  font-size: 18px;
+}
+
+input[type="number"] {
+  all: unset;
+  width: calc(100% - 55px);
+  border-radius: 5px;
+  text-align: right;
+  padding: 10px 15px;
+  padding-left: 40px;
+  font-size: 24px;
+  color: #00494d;
+  font-weight: 700;
+  background-color: #f4fafa;
+  border: 2px solid transparent;
+}
+
+input[type="number"]:focus {
+  border-color: #26c0ab;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  padding: 5px;
+}
+
+.tip-selector__tips {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.tip-selector__tips input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.tip-selector__tips label {
+  cursor: pointer;
+  background-color: #00494d;
+  color: white;
+  font-weight: 700;
+  width: calc(100% - 30px);
+  height: calc(100% - 20px);
+  min-height: 36px;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.tip-selector__tips input[type="radio"]:checked + label {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.person-selector__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10fr 9fr;
+      grid-template-columns: 10fr 9fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.person-selector__info__error {
+  text-align: right;
+  color: crimson;
+  display: none;
+}
+
+.person-selector.error .person-selector__info__error {
+  display: block;
+}
+
+.person-selector.error input {
+  border: 2px solid rgba(220, 20, 60, 0.795);
+}
+
+.result {
+  background-color: #00494d;
+  border-radius: 15px;
+  padding: 40px 25px 25px;
+  color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+.result h3 {
+  font-size: 13px;
+}
+
+.result .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.result .info .amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.result .info .amount .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+}
+
+.result .info .amount h1 {
+  color: #26c0ab;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.result button {
+  all: unset;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: #26c0ab;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #00494d;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 7% 0 40px;
+  }
+  main {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+  }
+  input[type="number"] {
+    cursor: pointer;
+  }
+  .tip-selector__tips {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .tip-selector__tips label:hover {
+    background-color: #c5e4e7;
+    color: #00494d;
+  }
+  .tip-selector__tips input[type="number"] {
+    padding-left: 15px;
+    width: calc(100% - 30px);
+  }
+  .result button:hover {
+    cursor: pointer;
+    background-color: #f4fafa;
+  }
+  .result .info .amount h1 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1100px) {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  body {
+    font-size: 18px;
+  }
+  header {
+    padding: 5% 0 30px;
+  }
+  main {
+    max-width: 900px;
+  }
+  .tip-selector__tips {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .result .info .amount h1 {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1400px) {
+  header {
+    padding: 10% 0 70px;
+  }
+  .result .info .amount h1 {
+    font-size: 55px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

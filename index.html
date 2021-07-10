@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="Logo" />
+    </header>
+    <main>
+      <section class="input">
+        <section class="amount-selector">
+          <h3>Bill</h3>
+          <div class="input-div">
+            <p>$</p>
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              placeholder="0"
+              min="0"
+              max="9999999"
+              autocomplete="off"
+            />
+          </div>
+        </section>
+        <section class="tip-selector">
+          <h3>Select Tip %</h3>
+          <div class="tip-selector__tips">
+            <input
+              type="radio"
+              name="tip"
+              id="tip5"
+              class="tip-selector__tips__tip"
+              value="5"
+            />
+            <label for="tip5"> 5% </label>
+            <input
+              type="radio"
+              name="tip"
+              id="tip10"
+              class="tip-selector__tips__tip"
+              value="10"
+            />
+            <label for="tip10"> 10% </label>
+            <input
+              type="radio"
+              name="tip"
+              id="tip15"
+              class="tip-selector__tips__tip"
+              value="15"
+            />
+            <label for="tip15"> 15% </label>
+            <input
+              type="radio"
+              name="tip"
+              id="tip25"
+              class="tip-selector__tips__tip"
+              value="25"
+            />
+            <label for="tip25"> 25% </label>
+            <input
+              type="radio"
+              name="tip"
+              id="tip50"
+              class="tip-selector__tips__tip"
+              value="50"
+            />
+            <label for="tip50"> 50% </label>
+            <input
+              type="number"
+              name="tip-custom"
+              id="tipCustom"
+              placeholder="Custom"
+              autocomplete="off"
+            />
+          </div>
+        </section>
+        <section class="person-selector">
+          <div class="person-selector__info">
+            <h3>Number of People</h3>
+            <h3 class="person-selector__info__error">Can't be zero</h3>
+          </div>
+          <div class="input-div">
+            <p><i class="fas fa-user"></i></p>
+            <input
+              type="number"
+              name="people"
+              id="people"
+              placeholder="0"
+              min="1"
+              max="99999"
+              autocomplete="off"
+            />
+          </div>
+        </section>
+      </section>
+      <section class="result">
+        <div class="info">
+          <div class="amount">
+            <div class="name">
+              <h2>Tip Amount</h2>
+              <h3>/ person</h3>
+            </div>
+            <h1>$<span id="tipPerson"></span></h1>
+          </div>
+          <div class="amount">
+            <div class="name">
+              <h2>Total</h2>
+              <h3>/ person</h3>
+            </div>
+            <h1>$<span id="totalPerson"></span></h1>
+          </div>
+        </div>
+        <button onclick="resetValues()">Reset</button>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
