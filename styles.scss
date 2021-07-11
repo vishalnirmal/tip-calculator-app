@@ -167,6 +167,9 @@ input[type="number"]:focus {
     text-transform: uppercase;
     font-size: 1.3rem;
     color: $very-dark-cyan;
+    &:disabled {
+      background-color: $darker-grayish-cyan;
+    }
   }
 }
 

@@ -230,6 +230,10 @@ input[type="number"]:focus {
   color: #00494d;
 }
 
+.result button:disabled {
+  background-color: #5e7a7d;
+}
+
 @media (min-width: 768px) {
   header {
     padding: 7% 0 40px;
